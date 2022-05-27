@@ -29,25 +29,27 @@ public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout_4;
+    QHBoxLayout *horizontalLayout_6;
     QLabel *label;
+    QPushButton *pushButton;
+    QVBoxLayout *verticalLayout_4;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *pushButton;
+    QPushButton *StartButton;
     QSpacerItem *horizontalSpacer_3;
     QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_4;
-    QPushButton *pushButton_3;
+    QPushButton *BoardButton;
     QSpacerItem *horizontalSpacer_5;
     QSpacerItem *verticalSpacer_5;
     QHBoxLayout *horizontalLayout_5;
-    QPushButton *pushButton_6;
+    QPushButton *AboutUsButton;
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_6;
-    QPushButton *pushButton_2;
+    QPushButton *ExitButton;
     QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer;
     QMenuBar *menubar;
@@ -57,7 +59,16 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(600, 677);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(0, 0));
+        MainWindow->setMaximumSize(QSize(1500, 1500));
+        MainWindow->setMouseTracking(true);
+        MainWindow->setAcceptDrops(false);
         MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -72,6 +83,13 @@ public:
 "	border-Radius: 7px;\n"
 "}\n"
 "\n"
+"QPushButton:hover{\n"
+"color: red;\n"
+"border-color: red;\n"
+"border-width: 2px;\n"
+"}\n"
+"\n"
+"\n"
 ""));
         verticalLayout_3 = new QVBoxLayout(centralwidget);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
@@ -81,13 +99,11 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout);
 
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalLayout_6->setContentsMargins(-1, 0, -1, -1);
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy);
         label->setMinimumSize(QSize(90, 30));
@@ -95,8 +111,28 @@ public:
 "background-color: rgb(255, 255, 255);\n"
 "border-Radius: 7px;"));
 
-        verticalLayout_4->addWidget(label);
+        horizontalLayout_6->addWidget(label);
 
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy1);
+        pushButton->setMinimumSize(QSize(30, 30));
+        pushButton->setMaximumSize(QSize(0, 16777215));
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"image: url(:/icon/Icons/icons8-close-30.png);\n"
+""));
+
+        horizontalLayout_6->addWidget(pushButton);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_6);
+
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalSpacer_2 = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_4->addItem(verticalSpacer_2);
@@ -108,19 +144,16 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy1);
-        pushButton->setMinimumSize(QSize(200, 30));
-        pushButton->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";\n"
+        StartButton = new QPushButton(centralwidget);
+        StartButton->setObjectName(QString::fromUtf8("StartButton"));
+        sizePolicy1.setHeightForWidth(StartButton->sizePolicy().hasHeightForWidth());
+        StartButton->setSizePolicy(sizePolicy1);
+        StartButton->setMinimumSize(QSize(200, 30));
+        StartButton->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";\n"
 "\n"
 ""));
 
-        horizontalLayout_2->addWidget(pushButton);
+        horizontalLayout_2->addWidget(StartButton);
 
         horizontalSpacer_3 = new QSpacerItem(25, 25, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -140,14 +173,14 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_4);
 
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        sizePolicy1.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy1);
-        pushButton_3->setMinimumSize(QSize(200, 30));
-        pushButton_3->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";"));
+        BoardButton = new QPushButton(centralwidget);
+        BoardButton->setObjectName(QString::fromUtf8("BoardButton"));
+        sizePolicy1.setHeightForWidth(BoardButton->sizePolicy().hasHeightForWidth());
+        BoardButton->setSizePolicy(sizePolicy1);
+        BoardButton->setMinimumSize(QSize(200, 30));
+        BoardButton->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";"));
 
-        horizontalLayout_3->addWidget(pushButton_3);
+        horizontalLayout_3->addWidget(BoardButton);
 
         horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -163,14 +196,14 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         horizontalLayout_5->setContentsMargins(-1, 0, -1, -1);
-        pushButton_6 = new QPushButton(centralwidget);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        sizePolicy1.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
-        pushButton_6->setSizePolicy(sizePolicy1);
-        pushButton_6->setMinimumSize(QSize(200, 30));
-        pushButton_6->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";"));
+        AboutUsButton = new QPushButton(centralwidget);
+        AboutUsButton->setObjectName(QString::fromUtf8("AboutUsButton"));
+        sizePolicy1.setHeightForWidth(AboutUsButton->sizePolicy().hasHeightForWidth());
+        AboutUsButton->setSizePolicy(sizePolicy1);
+        AboutUsButton->setMinimumSize(QSize(200, 30));
+        AboutUsButton->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";"));
 
-        horizontalLayout_5->addWidget(pushButton_6);
+        horizontalLayout_5->addWidget(AboutUsButton);
 
 
         verticalLayout_4->addLayout(horizontalLayout_5);
@@ -186,13 +219,15 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_6);
 
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setMinimumSize(QSize(200, 30));
-        pushButton_2->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";\n"
+        ExitButton = new QPushButton(centralwidget);
+        ExitButton->setObjectName(QString::fromUtf8("ExitButton"));
+        ExitButton->setMinimumSize(QSize(200, 30));
+        ExitButton->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";\n"
+"\n"
+"\n"
 ""));
 
-        horizontalLayout_4->addWidget(pushButton_2);
+        horizontalLayout_4->addWidget(ExitButton);
 
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -211,7 +246,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 600, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -226,10 +261,11 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "   WELLCOME TO SUDOKU GAME     ", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "START GAME", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "LeaderBoards", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "EXIT", nullptr));
+        pushButton->setText(QString());
+        StartButton->setText(QCoreApplication::translate("MainWindow", "START GAME", nullptr));
+        BoardButton->setText(QCoreApplication::translate("MainWindow", "LeaderBoards", nullptr));
+        AboutUsButton->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
+        ExitButton->setText(QCoreApplication::translate("MainWindow", "EXIT", nullptr));
     } // retranslateUi
 
 };

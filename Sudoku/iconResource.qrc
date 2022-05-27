@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/icon"/>
     <qresource prefix="/images">
-        <file>Icons/Amoled Puzzle IPhone Wallpaper - IPhone Wallpapers.jpg</file>
         <file>Icons/iPhone wallpaper.jpg</file>
     </qresource>
 </RCC>

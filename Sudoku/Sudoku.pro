@@ -16,14 +16,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aboutusdialog.cpp \
+    getnamedialog.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    sudokuwindow.cpp
 
 HEADERS += \
-    mainwindow.h
+    aboutusdialog.h \
+    getnamedialog.h \
+    mainwindow.h \
+    sudokuwindow.h
 
 FORMS += \
-    mainwindow.ui
+    aboutusdialog.ui \
+    getnamedialog.ui \
+    mainwindow.ui \
+    sudokuwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -31,4 +40,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    closeIcon.qrc \
     iconResource.qrc
