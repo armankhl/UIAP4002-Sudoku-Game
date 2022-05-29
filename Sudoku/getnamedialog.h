@@ -15,6 +15,9 @@ public:
 	explicit GetNameDialog(QWidget *parent = nullptr);
 	~GetNameDialog();
 
+private slots:
+	void on_pushButton_clicked();
+
 private:
 	Ui::GetNameDialog *ui;
 };

@@ -3,4 +3,8 @@
     <qresource prefix="/images">
         <file>Icons/iPhone wallpaper.jpg</file>
     </qresource>
+    <qresource prefix="/Cong"/>
+    <qresource prefix="/">
+        <file>Icons/Cong.jpg</file>
+    </qresource>
 </RCC>

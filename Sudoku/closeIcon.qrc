@@ -2,4 +2,7 @@
     <qresource prefix="/icon">
         <file>Icons/icons8-close-30.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>Icons/Cong2.jpg</file>
+    </qresource>
 </RCC>

@@ -20,19 +20,22 @@ SOURCES += \
     getnamedialog.cpp \
     main.cpp \
     mainwindow.cpp \
-    sudokuwindow.cpp
+    sudokuwindow.cpp \
+    wonwindow.cpp
 
 HEADERS += \
     aboutusdialog.h \
     getnamedialog.h \
     mainwindow.h \
-    sudokuwindow.h
+    sudokuwindow.h \
+    wonwindow.h
 
 FORMS += \
     aboutusdialog.ui \
     getnamedialog.ui \
     mainwindow.ui \
-    sudokuwindow.ui
+    sudokuwindow.ui \
+    wonwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

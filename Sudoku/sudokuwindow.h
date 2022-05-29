@@ -25,11 +25,13 @@ private slots:
 
 	bool CheckNum(int row , int column, int Num);
 
+	bool CheckTable();
+
 	void on_BackButton_clicked();
 
 	void on_SudokuTable_cellChanged(int row, int column);
 
-
+	void on_Finishbutton_clicked();
 
 private:
 		Ui::SudokuWindow *ui;

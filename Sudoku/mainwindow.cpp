@@ -9,7 +9,7 @@
 #include <QTextStream>
 #include <QStringList>
 #include <QScreen>
-
+bool gotname=0;
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
 	, ui(new Ui::MainWindow)
@@ -17,9 +17,14 @@ MainWindow::MainWindow(QWidget *parent)
 	ui->setupUi(this);
 
 	move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
-	//	GetNameDialog NameDialog;
-//	NameDialog.setModal(true);
-//	NameDialog.exec();
+
+	if(!gotname)
+	{
+		GetNameDialog NameDialog;
+		NameDialog.setModal(true);
+		NameDialog.exec();
+		gotname=1;
+	}
 }
 
 MainWindow::~MainWindow()
@@ -36,7 +41,7 @@ void MainWindow::on_ExitButton_clicked()
 void MainWindow::on_StartButton_clicked()
 {
 //	on_ExitButton_clicked();
-	this->close();
+	this->hide();
 	SudokuWindow GameWindow;
 	GameWindow.setModal(true);
 	GameWindow.exec();

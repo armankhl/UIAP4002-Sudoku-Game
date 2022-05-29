@@ -12,10 +12,10 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -25,38 +25,43 @@ QT_BEGIN_NAMESPACE
 class Ui_GetNameDialog
 {
 public:
-    QWidget *verticalLayoutWidget;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpacerItem *horizontalSpacer;
-    QLineEdit *lineEdit;
-    QDialogButtonBox *buttonBox;
+    QLineEdit *NameLine;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *GetNameDialog)
     {
         if (GetNameDialog->objectName().isEmpty())
             GetNameDialog->setObjectName(QString::fromUtf8("GetNameDialog"));
-        GetNameDialog->resize(375, 125);
-        GetNameDialog->setStyleSheet(QString::fromUtf8("background-color: rgb(68, 68, 68);"));
-        verticalLayoutWidget = new QWidget(GetNameDialog);
-        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(30, 0, 341, 121));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        GetNameDialog->resize(398, 125);
+        GetNameDialog->setStyleSheet(QString::fromUtf8("background-color: rgb(68, 68, 68);\n"
+""));
+        verticalLayoutWidget_2 = new QWidget(GetNameDialog);
+        verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
+        verticalLayoutWidget_2->setGeometry(QRect(29, 9, 351, 101));
+        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(verticalLayoutWidget);
+        label = new QLabel(verticalLayoutWidget_2);
         label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy);
-        label->setMinimumSize(QSize(80, 15));
-        label->setStyleSheet(QString::fromUtf8("font: 15pt \"NPISetareh\";\n"
-"background-color:  rgb(255, 234, 0)"));
+        label->setMinimumSize(QSize(150, 15));
+        label->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";\n"
+"background-color:  rgb(255, 238, 200);\n"
+"	border-Radius: 7px;"));
 
         horizontalLayout->addWidget(label);
 
@@ -64,30 +69,36 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        lineEdit = new QLineEdit(verticalLayoutWidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy);
-        lineEdit->setMinimumSize(QSize(25, 6));
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color: white;"));
+        NameLine = new QLineEdit(verticalLayoutWidget_2);
+        NameLine->setObjectName(QString::fromUtf8("NameLine"));
+        sizePolicy.setHeightForWidth(NameLine->sizePolicy().hasHeightForWidth());
+        NameLine->setSizePolicy(sizePolicy);
+        NameLine->setMinimumSize(QSize(25, 6));
+        NameLine->setStyleSheet(QString::fromUtf8("background-color: white;"));
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(NameLine);
 
 
         verticalLayout->addLayout(horizontalLayout);
 
-        buttonBox = new QDialogButtonBox(verticalLayoutWidget);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setStyleSheet(QString::fromUtf8("background-color:white;"));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        pushButton = new QPushButton(verticalLayoutWidget_2);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setStyleSheet(QString::fromUtf8("\n"
+"background-color: rgb(185, 185, 185);\n"
+"	border-Radius: 7px;\n"
+"	font: 15pt \"NPIRamin\";\n"
+"\n"
+"\n"
+"\n"
+""));
 
-        verticalLayout->addWidget(buttonBox);
+        verticalLayout->addWidget(pushButton);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
 
 
         retranslateUi(GetNameDialog);
-        QObject::connect(buttonBox, SIGNAL(accepted()), GetNameDialog, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), GetNameDialog, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(GetNameDialog);
     } // setupUi
@@ -95,7 +106,8 @@ public:
     void retranslateUi(QDialog *GetNameDialog)
     {
         GetNameDialog->setWindowTitle(QCoreApplication::translate("GetNameDialog", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("GetNameDialog", "Enter your name:", nullptr));
+        label->setText(QCoreApplication::translate("GetNameDialog", "     Enter your name:", nullptr));
+        pushButton->setText(QCoreApplication::translate("GetNameDialog", "OK", nullptr));
     } // retranslateUi
 
 };

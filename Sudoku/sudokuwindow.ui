@@ -36,8 +36,8 @@ border-width: 2px;
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>10</y>
+     <x>50</x>
+     <y>0</y>
      <width>552</width>
      <height>485</height>
     </rect>
@@ -463,10 +463,7 @@ border-width: 2px;
       </item>
       <item row="8" column="2">
        <property name="text">
-        <string>1</string>
-       </property>
-       <property name="flags">
-        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        <string/>
        </property>
       </item>
       <item row="8" column="3">
@@ -507,6 +504,9 @@ border-width: 2px;
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLineEdit" name="Rmes">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -515,8 +515,8 @@ border-width: 2px;
         </property>
         <property name="minimumSize">
          <size>
-          <width>220</width>
-          <height>20</height>
+          <width>300</width>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -524,6 +524,12 @@ border-width: 2px;
           <width>0</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
       </item>
@@ -534,30 +540,11 @@ border-width: 2px;
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>40</width>
+          <width>30</width>
           <height>20</height>
          </size>
         </property>
        </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="Clearbutton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>20</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Clear</string>
-        </property>
-       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="BackButton">
@@ -569,12 +556,47 @@ border-width: 2px;
         </property>
         <property name="minimumSize">
          <size>
-          <width>150</width>
-          <height>20</height>
+          <width>100</width>
+          <height>25</height>
          </size>
         </property>
         <property name="text">
          <string>Back</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>5</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Finishbutton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Finish</string>
         </property>
        </widget>
       </item>

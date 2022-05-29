@@ -4,6 +4,8 @@
 #include <time.h>
 #include <QTableWidgetItem>
 #include "QString"
+#include "wonwindow.h"
+#include "mainwindow.h"
 
 SudokuWindow::SudokuWindow(QWidget *parent) :
 	QDialog(parent),
@@ -18,7 +20,7 @@ SudokuWindow::~SudokuWindow()
 	delete ui;
 }
 
-//void SudokuWindow::SetItemColor(int row, int column, int t)
+//void SudokuWindow::SetItemColor(int row, int column, int t)|||         case 0: _t->SetItemColor((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
 //{
 //	if(t)
 //	{
@@ -35,21 +37,29 @@ void SudokuWindow::on_SudokuTable_cellChanged(int row, int column)
 {
 
 	int Num = ui->SudokuTable->item(row , column)->text().toInt();
-
-	bool NewNum=1;
-	NewNum = CheckNum(row , column , Num);
-
-	if(NewNum)
+	if(Num < 1 || Num > 9)
 	{
-		ui->Rmes->setStyleSheet("QLineEdit { background: green; selection-background-color: green; }");
-		ui->Rmes->setText("ACCEPTED");
+		ui->Rmes->setStyleSheet("QLineEdit { font: 10pt ;  background-color: rgb(255, 73, 73); color: Black; }");
+		ui->Rmes->setText("Wrong Number!");
+		ui->SudokuTable->item(row , column)->setText(nullptr);
 	}
 	else
 	{
-		ui->Rmes->setStyleSheet("QLineEdit { background: red; selection-background-color: red; }");
-		ui->Rmes->setText("Wrong Number");
-	}
+		bool NewNum=1;
+		NewNum = CheckNum(row , column , Num);
 
+		if(NewNum)
+		{
+			ui->Rmes->setStyleSheet("QLineEdit {font: 10pt ; background-color: rgb(116, 255, 78); color: Black;}");
+			ui->Rmes->setText("Accepted :)");
+		}
+		else
+		{
+			ui->Rmes->setStyleSheet("QLineEdit { font: 10pt ;  background-color: rgb(255, 73, 73); color: Black; }");
+			ui->Rmes->setText("Wrong Number! :|" );
+			ui->SudokuTable->item(row , column)->setText(nullptr);
+		}
+	}
 }
 
 
@@ -105,11 +115,47 @@ bool SudokuWindow::CheckNum(int row , int column, int Num)
 	return true;
 }
 
+bool SudokuWindow::CheckTable()
+{
+	for(int i = 0 ; i < 9 ; i++)
+	{
+		for(int j = 0 ; j < 9 ; j++)
+		{
+			if(ui->SudokuTable->item(i,j)->text() == nullptr)
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
 void SudokuWindow::on_BackButton_clicked()
 {
 	//complete later
 	this->close();
 }
+
+
+
+
+void SudokuWindow::on_Finishbutton_clicked()
+{
+	bool FullTable = CheckTable();
+	if(!FullTable)
+	{
+		ui->Rmes->setStyleSheet("QLineEdit { font: 10pt ;  background-color: rgb(255, 73, 73); color: Black; }");
+		ui->Rmes->setText("You Should Complite Sudoku Table First! :|");
+	}
+	else
+	{
+		this->close();
+		WonWindow *newmain= new WonWindow();
+		newmain->show();
+	}
+
+}
+
 
 
 

@@ -32,8 +32,9 @@ public:
     QHBoxLayout *horizontalLayout;
     QLineEdit *Rmes;
     QSpacerItem *horizontalSpacer;
-    QPushButton *Clearbutton;
     QPushButton *BackButton;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *Finishbutton;
 
     void setupUi(QDialog *SudokuWindow)
     {
@@ -56,7 +57,7 @@ public:
 ""));
         verticalLayoutWidget = new QWidget(SudokuWindow);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(60, 10, 552, 485));
+        verticalLayoutWidget->setGeometry(QRect(50, 0, 552, 485));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -185,7 +186,6 @@ public:
         __qtablewidgetitem38->setFlags(Qt::ItemIsSelectable|Qt::ItemIsDragEnabled|Qt::ItemIsDropEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsEnabled);
         SudokuTable->setItem(8, 0, __qtablewidgetitem38);
         QTableWidgetItem *__qtablewidgetitem39 = new QTableWidgetItem();
-        __qtablewidgetitem39->setFlags(Qt::ItemIsSelectable|Qt::ItemIsDragEnabled|Qt::ItemIsDropEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsEnabled);
         SudokuTable->setItem(8, 2, __qtablewidgetitem39);
         QTableWidgetItem *__qtablewidgetitem40 = new QTableWidgetItem();
         __qtablewidgetitem40->setFlags(Qt::ItemIsSelectable|Qt::ItemIsDragEnabled|Qt::ItemIsDropEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsEnabled);
@@ -234,32 +234,38 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         Rmes = new QLineEdit(verticalLayoutWidget);
         Rmes->setObjectName(QString::fromUtf8("Rmes"));
+        Rmes->setEnabled(false);
         sizePolicy.setHeightForWidth(Rmes->sizePolicy().hasHeightForWidth());
         Rmes->setSizePolicy(sizePolicy);
-        Rmes->setMinimumSize(QSize(220, 20));
+        Rmes->setMinimumSize(QSize(300, 25));
         Rmes->setMaximumSize(QSize(0, 16777215));
+        Rmes->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout->addWidget(Rmes);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(30, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
-
-        Clearbutton = new QPushButton(verticalLayoutWidget);
-        Clearbutton->setObjectName(QString::fromUtf8("Clearbutton"));
-        sizePolicy.setHeightForWidth(Clearbutton->sizePolicy().hasHeightForWidth());
-        Clearbutton->setSizePolicy(sizePolicy);
-        Clearbutton->setMinimumSize(QSize(150, 20));
-
-        horizontalLayout->addWidget(Clearbutton);
 
         BackButton = new QPushButton(verticalLayoutWidget);
         BackButton->setObjectName(QString::fromUtf8("BackButton"));
         sizePolicy.setHeightForWidth(BackButton->sizePolicy().hasHeightForWidth());
         BackButton->setSizePolicy(sizePolicy);
-        BackButton->setMinimumSize(QSize(150, 20));
+        BackButton->setMinimumSize(QSize(100, 25));
 
         horizontalLayout->addWidget(BackButton);
+
+        horizontalSpacer_2 = new QSpacerItem(5, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+        Finishbutton = new QPushButton(verticalLayoutWidget);
+        Finishbutton->setObjectName(QString::fromUtf8("Finishbutton"));
+        sizePolicy.setHeightForWidth(Finishbutton->sizePolicy().hasHeightForWidth());
+        Finishbutton->setSizePolicy(sizePolicy);
+        Finishbutton->setMinimumSize(QSize(100, 25));
+
+        horizontalLayout->addWidget(Finishbutton);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -346,20 +352,19 @@ public:
         ___qtablewidgetitem33->setText(QCoreApplication::translate("SudokuWindow", "6", nullptr));
         QTableWidgetItem *___qtablewidgetitem34 = SudokuTable->item(8, 0);
         ___qtablewidgetitem34->setText(QCoreApplication::translate("SudokuWindow", "9", nullptr));
-        QTableWidgetItem *___qtablewidgetitem35 = SudokuTable->item(8, 2);
+        QTableWidgetItem *___qtablewidgetitem35 = SudokuTable->item(8, 3);
         ___qtablewidgetitem35->setText(QCoreApplication::translate("SudokuWindow", "1", nullptr));
-        QTableWidgetItem *___qtablewidgetitem36 = SudokuTable->item(8, 3);
-        ___qtablewidgetitem36->setText(QCoreApplication::translate("SudokuWindow", "1", nullptr));
-        QTableWidgetItem *___qtablewidgetitem37 = SudokuTable->item(8, 6);
-        ___qtablewidgetitem37->setText(QCoreApplication::translate("SudokuWindow", "9", nullptr));
-        QTableWidgetItem *___qtablewidgetitem38 = SudokuTable->item(8, 7);
-        ___qtablewidgetitem38->setText(QCoreApplication::translate("SudokuWindow", "7", nullptr));
-        QTableWidgetItem *___qtablewidgetitem39 = SudokuTable->item(8, 8);
-        ___qtablewidgetitem39->setText(QCoreApplication::translate("SudokuWindow", "9", nullptr));
+        QTableWidgetItem *___qtablewidgetitem36 = SudokuTable->item(8, 6);
+        ___qtablewidgetitem36->setText(QCoreApplication::translate("SudokuWindow", "9", nullptr));
+        QTableWidgetItem *___qtablewidgetitem37 = SudokuTable->item(8, 7);
+        ___qtablewidgetitem37->setText(QCoreApplication::translate("SudokuWindow", "7", nullptr));
+        QTableWidgetItem *___qtablewidgetitem38 = SudokuTable->item(8, 8);
+        ___qtablewidgetitem38->setText(QCoreApplication::translate("SudokuWindow", "9", nullptr));
         SudokuTable->setSortingEnabled(__sortingEnabled);
 
-        Clearbutton->setText(QCoreApplication::translate("SudokuWindow", "Clear", nullptr));
+        Rmes->setText(QString());
         BackButton->setText(QCoreApplication::translate("SudokuWindow", "Back", nullptr));
+        Finishbutton->setText(QCoreApplication::translate("SudokuWindow", "Finish", nullptr));
     } // retranslateUi
 
 };

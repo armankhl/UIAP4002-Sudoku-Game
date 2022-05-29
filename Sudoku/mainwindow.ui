@@ -95,7 +95,7 @@ background-color: rgb(255, 255, 255);
 border-Radius: 7px;</string>
         </property>
         <property name="text">
-         <string>   WELLCOME TO SUDOKU GAME     </string>
+         <string>   WELLCOME TO LORD SUDOKU     </string>
         </property>
        </widget>
       </item>

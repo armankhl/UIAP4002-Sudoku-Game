@@ -260,7 +260,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "   WELLCOME TO SUDOKU GAME     ", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "   WELLCOME TO LORD SUDOKU     ", nullptr));
         pushButton->setText(QString());
         StartButton->setText(QCoreApplication::translate("MainWindow", "START GAME", nullptr));
         BoardButton->setText(QCoreApplication::translate("MainWindow", "LeaderBoards", nullptr));

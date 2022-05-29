@@ -3,9 +3,11 @@ debug/getnamedialog.o
 debug/main.o
 debug/mainwindow.o
 debug/sudokuwindow.o
+debug/wonwindow.o
 debug/qrc_closeIcon.o
 debug/qrc_iconResource.o
 debug/moc_aboutusdialog.o
 debug/moc_getnamedialog.o
 debug/moc_mainwindow.o
 debug/moc_sudokuwindow.o
+debug/moc_wonwindow.o
