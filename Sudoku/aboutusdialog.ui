@@ -39,7 +39,10 @@
 background-color:  rgb(255, 234, 0)</string>
         </property>
         <property name="text">
-         <string>                  Release date:</string>
+         <string> Release date:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
@@ -80,6 +83,9 @@ color: black;</string>
         <property name="text">
          <string>May, 2022</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
       </item>
      </layout>
@@ -96,7 +102,10 @@ color: black;</string>
 background-color:  rgb(255, 234, 0)</string>
         </property>
         <property name="text">
-         <string>                 By:</string>
+         <string>By:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
@@ -125,6 +134,9 @@ color: black;</string>
         <property name="text">
          <string>Arman Khalili</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
       </item>
      </layout>
@@ -138,7 +150,10 @@ color: black;</string>
 background-color:  rgb(255, 234, 0)</string>
         </property>
         <property name="text">
-         <string>                Communication:</string>
+         <string>Communication:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
@@ -166,6 +181,9 @@ color: black;</string>
         </property>
         <property name="text">
          <string>Arman78khalili@gmail.com</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>

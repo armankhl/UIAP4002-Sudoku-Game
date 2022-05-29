@@ -9,6 +9,7 @@
 #include <QTextStream>
 #include <QStringList>
 #include <QScreen>
+#include "boardwindow.h"
 bool gotname=0;
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -60,3 +61,9 @@ void MainWindow::on_pushButton_clicked()
 }
 
 
+
+void MainWindow::on_BoardButton_clicked()
+{
+	BoardWindow *newboard= new BoardWindow();
+	newboard->show();
+}

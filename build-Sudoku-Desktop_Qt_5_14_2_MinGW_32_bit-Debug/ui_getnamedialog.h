@@ -58,10 +58,11 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy);
-        label->setMinimumSize(QSize(150, 15));
+        label->setMinimumSize(QSize(150, 25));
         label->setStyleSheet(QString::fromUtf8("font: 15pt \"NPIRamin\";\n"
 "background-color:  rgb(255, 238, 200);\n"
 "	border-Radius: 7px;"));
+        label->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(label);
 
@@ -73,7 +74,7 @@ public:
         NameLine->setObjectName(QString::fromUtf8("NameLine"));
         sizePolicy.setHeightForWidth(NameLine->sizePolicy().hasHeightForWidth());
         NameLine->setSizePolicy(sizePolicy);
-        NameLine->setMinimumSize(QSize(25, 6));
+        NameLine->setMinimumSize(QSize(30, 25));
         NameLine->setStyleSheet(QString::fromUtf8("background-color: white;"));
 
         horizontalLayout->addWidget(NameLine);
@@ -106,7 +107,7 @@ public:
     void retranslateUi(QDialog *GetNameDialog)
     {
         GetNameDialog->setWindowTitle(QCoreApplication::translate("GetNameDialog", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("GetNameDialog", "     Enter your name:", nullptr));
+        label->setText(QCoreApplication::translate("GetNameDialog", "Enter your name:", nullptr));
         pushButton->setText(QCoreApplication::translate("GetNameDialog", "OK", nullptr));
     } // retranslateUi
 

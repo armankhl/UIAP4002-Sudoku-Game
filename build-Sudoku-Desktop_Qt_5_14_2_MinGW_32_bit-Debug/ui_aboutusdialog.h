@@ -59,6 +59,7 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setStyleSheet(QString::fromUtf8("font: 15pt \"NPISetareh\";\n"
 "background-color:  rgb(255, 234, 0)"));
+        label->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout->addWidget(label);
 
@@ -76,6 +77,7 @@ public:
         lineEdit->setStyleSheet(QString::fromUtf8("font: 12pt \"MV Boli\";\n"
 "background-color: rgb(166, 166, 166);\n"
 "color: black;"));
+        lineEdit->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(lineEdit);
 
@@ -89,6 +91,7 @@ public:
         label_2->setLayoutDirection(Qt::LeftToRight);
         label_2->setStyleSheet(QString::fromUtf8("font: 15pt \"NPISetareh\";\n"
 "background-color:  rgb(255, 234, 0)"));
+        label_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(label_2);
 
@@ -101,6 +104,7 @@ public:
         lineEdit_2->setStyleSheet(QString::fromUtf8("font: 12pt \"MV Boli\";\n"
 "background-color: rgb(166, 166, 166);\n"
 "color: black;"));
+        lineEdit_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_2->addWidget(lineEdit_2);
 
@@ -113,6 +117,7 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setStyleSheet(QString::fromUtf8("font: 15pt \"NPISetareh\";\n"
 "background-color:  rgb(255, 234, 0)"));
+        label_3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_4->addWidget(label_3);
 
@@ -125,6 +130,7 @@ public:
         lineEdit_3->setStyleSheet(QString::fromUtf8("font: 12pt \"MV Boli\";\n"
 "background-color: rgb(166, 166, 166);\n"
 "color: black;"));
+        lineEdit_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_4->addWidget(lineEdit_3);
 
@@ -162,11 +168,11 @@ public:
     void retranslateUi(QDialog *AboutUsDialog)
     {
         AboutUsDialog->setWindowTitle(QCoreApplication::translate("AboutUsDialog", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("AboutUsDialog", "                  Release date:", nullptr));
+        label->setText(QCoreApplication::translate("AboutUsDialog", " Release date:", nullptr));
         lineEdit->setText(QCoreApplication::translate("AboutUsDialog", "May, 2022", nullptr));
-        label_2->setText(QCoreApplication::translate("AboutUsDialog", "                 By:", nullptr));
+        label_2->setText(QCoreApplication::translate("AboutUsDialog", "By:", nullptr));
         lineEdit_2->setText(QCoreApplication::translate("AboutUsDialog", "Arman Khalili", nullptr));
-        label_3->setText(QCoreApplication::translate("AboutUsDialog", "                Communication:", nullptr));
+        label_3->setText(QCoreApplication::translate("AboutUsDialog", "Communication:", nullptr));
         lineEdit_3->setText(QCoreApplication::translate("AboutUsDialog", "Arman78khalili@gmail.com", nullptr));
         pushButton->setText(QCoreApplication::translate("AboutUsDialog", "Back ", nullptr));
     } // retranslateUi

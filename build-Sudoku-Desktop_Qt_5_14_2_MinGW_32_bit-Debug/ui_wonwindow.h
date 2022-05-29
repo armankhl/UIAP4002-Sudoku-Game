@@ -16,7 +16,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -40,7 +39,6 @@ public:
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton;
     QSpacerItem *horizontalSpacer_4;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *WonWindow)
     {
@@ -155,9 +153,6 @@ public:
         verticalLayout->addLayout(horizontalLayout_3);
 
         WonWindow->setCentralWidget(centralwidget);
-        statusbar = new QStatusBar(WonWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        WonWindow->setStatusBar(statusbar);
 
         retranslateUi(WonWindow);
 

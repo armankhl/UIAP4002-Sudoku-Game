@@ -45,6 +45,7 @@ public:
         SudokuWindow->setTabletTracking(false);
         SudokuWindow->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
+"	font: 15pt \"NPIRamin\";\n"
 "	background-color: rgb(161, 161, 161);\n"
 "	border-Radius: 7px;\n"
 "}\n"
@@ -240,6 +241,7 @@ public:
         Rmes->setMinimumSize(QSize(300, 25));
         Rmes->setMaximumSize(QSize(0, 16777215));
         Rmes->setStyleSheet(QString::fromUtf8(""));
+        Rmes->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(Rmes);
 

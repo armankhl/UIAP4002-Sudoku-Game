@@ -146,6 +146,9 @@ void SudokuWindow::on_Finishbutton_clicked()
 	{
 		ui->Rmes->setStyleSheet("QLineEdit { font: 10pt ;  background-color: rgb(255, 73, 73); color: Black; }");
 		ui->Rmes->setText("You Should Complite Sudoku Table First! :|");
+//		this->close();
+//		WonWindow *newmain= new WonWindow();
+//		newmain->show();
 	}
 	else
 	{

@@ -24,6 +24,8 @@ private slots:
 
 	void on_pushButton_clicked();
 
+	void on_BoardButton_clicked();
+
 private:
 	Ui::MainWindow *ui;
 };

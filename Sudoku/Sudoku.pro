@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     aboutusdialog.cpp \
+    boardwindow.cpp \
     getnamedialog.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     aboutusdialog.h \
+    boardwindow.h \
     getnamedialog.h \
     mainwindow.h \
     sudokuwindow.h \
@@ -32,6 +34,7 @@ HEADERS += \
 
 FORMS += \
     aboutusdialog.ui \
+    boardwindow.ui \
     getnamedialog.ui \
     mainwindow.ui \
     sudokuwindow.ui \

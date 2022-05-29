@@ -22,6 +22,7 @@
   <property name="styleSheet">
    <string notr="true">QPushButton
 {
+	font: 15pt &quot;NPIRamin&quot;;
 	background-color: rgb(161, 161, 161);
 	border-Radius: 7px;
 }
@@ -530,6 +531,9 @@ border-width: 2px;
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
