@@ -6,15 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>413</width>
-    <height>155</height>
+    <width>425</width>
+    <height>162</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(68, 68, 68);
+   <string notr="true">background-color: rgb(88, 85, 85);
+border-Radius: 7px;
+
 </string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
@@ -35,8 +37,10 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="styleSheet">
-         <string notr="true">font: 15pt &quot;NPISetareh&quot;;
-background-color:  rgb(255, 234, 0)</string>
+         <string notr="true">background-color: rgb(71, 71, 71);
+	font: 15pt &quot;Permanent Marker&quot;;
+	color: rgb(255, 249, 197);
+	border-Radius: 7px;</string>
         </property>
         <property name="text">
          <string> Release date:</string>
@@ -98,8 +102,11 @@ color: black;</string>
          <enum>Qt::LeftToRight</enum>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 15pt &quot;NPISetareh&quot;;
-background-color:  rgb(255, 234, 0)</string>
+         <string notr="true">background-color: rgb(71, 71, 71);
+	font: 15pt &quot;Permanent Marker&quot;;
+	color: rgb(255, 249, 197);
+	border-Radius: 7px;
+</string>
         </property>
         <property name="text">
          <string>By:</string>
@@ -146,8 +153,10 @@ color: black;</string>
       <item>
        <widget class="QLabel" name="label_3">
         <property name="styleSheet">
-         <string notr="true">font: 15pt &quot;NPISetareh&quot;;
-background-color:  rgb(255, 234, 0)</string>
+         <string notr="true">background-color: rgb(71, 71, 71);
+	font: 15pt &quot;Permanent Marker&quot;;
+	color: rgb(255, 249, 197);
+	border-Radius: 7px;</string>
         </property>
         <property name="text">
          <string>Communication:</string>

@@ -20,9 +20,6 @@ public:
 	QAbstractItemModel * model;
 private slots:
 
-
-	void SetItemColor(int x, int y, int t);
-
 	bool CheckNum(int row , int column, int Num);
 
 	bool CheckTable();

@@ -41,7 +41,6 @@ void MainWindow::on_ExitButton_clicked()
 
 void MainWindow::on_StartButton_clicked()
 {
-//	on_ExitButton_clicked();
 	this->hide();
 	SudokuWindow GameWindow;
 	GameWindow.setModal(true);

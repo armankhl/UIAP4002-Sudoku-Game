@@ -44,8 +44,10 @@ public:
     {
         if (AboutUsDialog->objectName().isEmpty())
             AboutUsDialog->setObjectName(QString::fromUtf8("AboutUsDialog"));
-        AboutUsDialog->resize(413, 155);
-        AboutUsDialog->setStyleSheet(QString::fromUtf8("background-color: rgb(68, 68, 68);\n"
+        AboutUsDialog->resize(425, 162);
+        AboutUsDialog->setStyleSheet(QString::fromUtf8("background-color: rgb(88, 85, 85);\n"
+"border-Radius: 7px;\n"
+"\n"
 ""));
         verticalLayoutWidget = new QWidget(AboutUsDialog);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
@@ -57,8 +59,10 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(verticalLayoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setStyleSheet(QString::fromUtf8("font: 15pt \"NPISetareh\";\n"
-"background-color:  rgb(255, 234, 0)"));
+        label->setStyleSheet(QString::fromUtf8("background-color: rgb(71, 71, 71);\n"
+"	font: 15pt \"Permanent Marker\";\n"
+"	color: rgb(255, 249, 197);\n"
+"	border-Radius: 7px;"));
         label->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout->addWidget(label);
@@ -89,8 +93,11 @@ public:
         label_2 = new QLabel(verticalLayoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setLayoutDirection(Qt::LeftToRight);
-        label_2->setStyleSheet(QString::fromUtf8("font: 15pt \"NPISetareh\";\n"
-"background-color:  rgb(255, 234, 0)"));
+        label_2->setStyleSheet(QString::fromUtf8("background-color: rgb(71, 71, 71);\n"
+"	font: 15pt \"Permanent Marker\";\n"
+"	color: rgb(255, 249, 197);\n"
+"	border-Radius: 7px;\n"
+""));
         label_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(label_2);
@@ -115,8 +122,10 @@ public:
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         label_3 = new QLabel(verticalLayoutWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setStyleSheet(QString::fromUtf8("font: 15pt \"NPISetareh\";\n"
-"background-color:  rgb(255, 234, 0)"));
+        label_3->setStyleSheet(QString::fromUtf8("background-color: rgb(71, 71, 71);\n"
+"	font: 15pt \"Permanent Marker\";\n"
+"	color: rgb(255, 249, 197);\n"
+"	border-Radius: 7px;"));
         label_3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_4->addWidget(label_3);

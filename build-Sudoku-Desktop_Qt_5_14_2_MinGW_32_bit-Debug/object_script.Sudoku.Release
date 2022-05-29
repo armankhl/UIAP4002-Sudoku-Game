@@ -1,5 +1,6 @@
 release/aboutusdialog.o
 release/boardwindow.o
+release/exitask.o
 release/getnamedialog.o
 release/main.o
 release/mainwindow.o
@@ -9,6 +10,7 @@ release/qrc_closeIcon.o
 release/qrc_iconResource.o
 release/moc_aboutusdialog.o
 release/moc_boardwindow.o
+release/moc_exitask.o
 release/moc_getnamedialog.o
 release/moc_mainwindow.o
 release/moc_sudokuwindow.o

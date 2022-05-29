@@ -21,9 +21,9 @@
 }
 QLabel
 {
-	background-color: rgb(71, 71, 71);
+	background-color: rgb(121, 121, 121);
 	font: 25pt &quot;Permanent Marker&quot;;
-	color: rgb(255, 249, 197);
+	color: rgb(255, 253, 224);
 	border-Radius: 7px;
 }
 
@@ -252,6 +252,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
          </item>
          <item>
           <widget class="QLineEdit" name="p1n">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -274,6 +277,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
          </item>
          <item>
           <widget class="QLineEdit" name="p1s">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -312,6 +318,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p2n">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -322,6 +331,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p2s">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -358,6 +370,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p3n">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -368,6 +383,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p3s">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -404,6 +422,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p4n">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -414,6 +435,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p4s">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -450,6 +474,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p5n">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -460,6 +487,9 @@ font: 18pt &quot;Permanent Marker&quot;;</string>
        </item>
        <item>
         <widget class="QLineEdit" name="p5s">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>

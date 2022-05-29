@@ -77,9 +77,9 @@ public:
 "}\n"
 "QLabel\n"
 "{\n"
-"	background-color: rgb(71, 71, 71);\n"
+"	background-color: rgb(121, 121, 121);\n"
 "	font: 25pt \"Permanent Marker\";\n"
-"	color: rgb(255, 249, 197);\n"
+"	color: rgb(255, 253, 224);\n"
 "	border-Radius: 7px;\n"
 "}\n"
 "\n"
@@ -194,6 +194,7 @@ public:
 
         p1n = new QLineEdit(verticalLayoutWidget);
         p1n->setObjectName(QString::fromUtf8("p1n"));
+        p1n->setEnabled(false);
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -206,6 +207,7 @@ public:
 
         p1s = new QLineEdit(verticalLayoutWidget);
         p1s->setObjectName(QString::fromUtf8("p1s"));
+        p1s->setEnabled(false);
         p1s->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_3->addWidget(p1s);
@@ -229,12 +231,14 @@ public:
 
         p2n = new QLineEdit(verticalLayoutWidget);
         p2n->setObjectName(QString::fromUtf8("p2n"));
+        p2n->setEnabled(false);
         p2n->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_5->addWidget(p2n);
 
         p2s = new QLineEdit(verticalLayoutWidget);
         p2s->setObjectName(QString::fromUtf8("p2s"));
+        p2s->setEnabled(false);
         p2s->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_5->addWidget(p2s);
@@ -255,12 +259,14 @@ public:
 
         p3n = new QLineEdit(verticalLayoutWidget);
         p3n->setObjectName(QString::fromUtf8("p3n"));
+        p3n->setEnabled(false);
         p3n->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_6->addWidget(p3n);
 
         p3s = new QLineEdit(verticalLayoutWidget);
         p3s->setObjectName(QString::fromUtf8("p3s"));
+        p3s->setEnabled(false);
         p3s->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_6->addWidget(p3s);
@@ -281,12 +287,14 @@ public:
 
         p4n = new QLineEdit(verticalLayoutWidget);
         p4n->setObjectName(QString::fromUtf8("p4n"));
+        p4n->setEnabled(false);
         p4n->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_7->addWidget(p4n);
 
         p4s = new QLineEdit(verticalLayoutWidget);
         p4s->setObjectName(QString::fromUtf8("p4s"));
+        p4s->setEnabled(false);
         p4s->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_7->addWidget(p4s);
@@ -307,12 +315,14 @@ public:
 
         p5n = new QLineEdit(verticalLayoutWidget);
         p5n->setObjectName(QString::fromUtf8("p5n"));
+        p5n->setEnabled(false);
         p5n->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_8->addWidget(p5n);
 
         p5s = new QLineEdit(verticalLayoutWidget);
         p5s->setObjectName(QString::fromUtf8("p5s"));
+        p5s->setEnabled(false);
         p5s->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_8->addWidget(p5s);

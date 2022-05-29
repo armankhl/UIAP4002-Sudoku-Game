@@ -6,6 +6,7 @@
 #include "QString"
 #include "wonwindow.h"
 #include "mainwindow.h"
+#include "exitask.h"
 
 SudokuWindow::SudokuWindow(QWidget *parent) :
 	QDialog(parent),
@@ -19,19 +20,6 @@ SudokuWindow::~SudokuWindow()
 {
 	delete ui;
 }
-
-//void SudokuWindow::SetItemColor(int row, int column, int t)|||         case 0: _t->SetItemColor((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
-//{
-//	if(t)
-//	{
-//		ui->SudokuTable->item(row, column)->setBackground(Qt::green);
-//	}
-
-//	if(t == 0)
-//	{
-//		ui->SudokuTable->item(row, column)->setBackground(Qt::red);
-//	}
-//}
 
 void SudokuWindow::on_SudokuTable_cellChanged(int row, int column)
 {
@@ -51,12 +39,12 @@ void SudokuWindow::on_SudokuTable_cellChanged(int row, int column)
 		if(NewNum)
 		{
 			ui->Rmes->setStyleSheet("QLineEdit {font: 10pt ; background-color: rgb(116, 255, 78); color: Black;}");
-			ui->Rmes->setText("Accepted :)");
+			ui->Rmes->setText("Nice!");
 		}
 		else
 		{
 			ui->Rmes->setStyleSheet("QLineEdit { font: 10pt ;  background-color: rgb(255, 73, 73); color: Black; }");
-			ui->Rmes->setText("Wrong Number! :|" );
+			ui->Rmes->setText("Wrong Number. Try Again!" );
 			ui->SudokuTable->item(row , column)->setText(nullptr);
 		}
 	}
@@ -132,8 +120,9 @@ bool SudokuWindow::CheckTable()
 
 void SudokuWindow::on_BackButton_clicked()
 {
-	//complete later
 	this->close();
+	MainWindow *newmainn = new MainWindow();
+	newmainn->show();
 }
 
 
@@ -145,7 +134,7 @@ void SudokuWindow::on_Finishbutton_clicked()
 	if(!FullTable)
 	{
 		ui->Rmes->setStyleSheet("QLineEdit { font: 10pt ;  background-color: rgb(255, 73, 73); color: Black; }");
-		ui->Rmes->setText("You Should Complite Sudoku Table First! :|");
+		ui->Rmes->setText("PLZ Complete All Cells First! :|");
 //		this->close();
 //		WonWindow *newmain= new WonWindow();
 //		newmain->show();
